@@ -45,6 +45,19 @@ export default function Home() {
           pursue, and I&apos;m unsure of what else to do.
         </CardContent>
       </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 3</CardTitle>
+        <CardDescription>16/04/2024, 10:16</CardDescription>
+        <CardContent>
+          I&apos;ve decided that the main goal of the website will be a social
+          network with chats and voice chats. Currently, I&apos;m working on
+          refining the main goal. Furthermore, I&apos;ve decided that my first
+          secondary goal will be word filtering and monitoring people who use
+          offensive language. In other words, I&apos;ll create an AI model
+          capable of identifying offensive words in chats, and perhaps in the
+          future, I&apos;ll also add this functionality to voice chats.
+        </CardContent>
+      </Card>
     </div>
   );
 }
