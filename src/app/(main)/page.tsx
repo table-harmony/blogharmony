@@ -70,6 +70,16 @@ export default function Home() {
           add authorization and api&apos;s using cerbos.
         </CardContent>
       </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 5</CardTitle>
+        <CardDescription>17/04/2024, 22:38</CardDescription>
+        <CardContent>
+          I have experimented with the Astro framework, So I written this blog
+          in Astro. It is available in the astro-migration branch on this
+          projec&apos;s github repository. Although astro is fine I prefer
+          Next.js.
+        </CardContent>
+      </Card>
     </div>
   );
 }
