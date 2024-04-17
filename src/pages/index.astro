@@ -1,11 +1,17 @@
 ---
 import '@/styles/globals.css'
 import Layout from '@/layouts/Layout.astro';
+
+import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/PageHeader';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		
-	</main>
+<Layout>
+	<PageHeader>
+		<PageHeaderHeading>Blog</PageHeaderHeading>
+		<PageHeaderDescription>
+			Welcome to my blog, Where i write about my process while writing my
+			website
+		</PageHeaderDescription>
+	</PageHeader>
 </Layout>
 
