@@ -58,6 +58,18 @@ export default function Home() {
           future, I&apos;ll also add this functionality to voice chats.
         </CardContent>
       </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 4</CardTitle>
+        <CardDescription>17/04/2024, 10:42</CardDescription>
+        <CardContent>
+          I have been thinking over the main goal of the website and I have
+          squat. It seems I can&apos;t find any cool features for the main
+          purpose although, I thought something to do with teaching while in a
+          conversation could be interasting. Also I need to remember that I
+          still haven&apos;t implemented the middleware yet and would like to
+          add authorization and api&apos;s using cerbos.
+        </CardContent>
+      </Card>
     </div>
   );
 }
