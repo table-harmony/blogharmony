@@ -80,6 +80,14 @@ export default function Home() {
           Next.js.
         </CardContent>
       </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 6</CardTitle>
+        <CardDescription>19/04/2024, 10:02</CardDescription>
+        <CardContent>
+          I am losing hope, I have no idea for my main purpose in the website so
+          I just do a couple of tweaks.
+        </CardContent>
+      </Card>
     </div>
   );
 }
