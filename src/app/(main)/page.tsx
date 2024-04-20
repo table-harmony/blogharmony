@@ -88,6 +88,15 @@ export default function Home() {
           I just do a couple of tweaks.
         </CardContent>
       </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 7</CardTitle>
+        <CardDescription>20/04/2024, 15:31</CardDescription>
+        <CardContent>
+          It&apos;s my birthday, Still haven&apos;t thought of anything. I had
+          an idea to enhance the whole social app stuff but my brother said it
+          was like zoom, So no.
+        </CardContent>
+      </Card>
     </div>
   );
 }
