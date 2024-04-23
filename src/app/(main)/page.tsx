@@ -97,6 +97,13 @@ export default function Home() {
           was like zoom, So no.
         </CardContent>
       </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 8</CardTitle>
+        <CardDescription>23/04/2024, 9:49</CardDescription>
+        <CardContent>
+          No purpose, But I have focused on the current code of the project.
+        </CardContent>
+      </Card>
     </div>
   );
 }
