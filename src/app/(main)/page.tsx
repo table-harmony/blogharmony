@@ -104,6 +104,32 @@ export default function Home() {
           No purpose, But I have focused on the current code of the project.
         </CardContent>
       </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 9</CardTitle>
+        <CardDescription>24/04/2024, 14:04</CardDescription>
+        <CardContent>
+          Thought of different layout for my data-access and use-case layer, And
+          started to group them togther for each table. (
+          <pre>
+            {`
+  ├── infrastructure
+  │   ├── users
+  │   │   ├── data-access
+  │   │   │   ├── index.ts
+  │   │   │   └── ...
+  │   │   ├── use-cases
+  │   │   │   ├── index.ts
+  │   │   │   └── ...
+  │   │   ├── entity.ts
+  │   │   ├── index.ts
+  │   │   ├── types.ts
+  │   │   └── utils.ts
+  │   └── ...
+  └── 
+    `}
+          </pre>
+        </CardContent>
+      </Card>
     </div>
   );
 }
