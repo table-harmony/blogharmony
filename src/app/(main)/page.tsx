@@ -109,7 +109,7 @@ export default function Home() {
         <CardDescription>24/04/2024, 14:04</CardDescription>
         <CardContent>
           Thought of different layout for my data-access and use-case layer, And
-          started to group them togther for each table. (
+          started to group them togther for each table.
           <pre>
             {`
   ├── infrastructure
@@ -125,6 +125,26 @@ export default function Home() {
   │   │   ├── types.ts
   │   │   └── utils.ts
   │   └── ...
+  └── 
+    `}
+          </pre>
+        </CardContent>
+      </Card>
+      <Card className="space-y-4 p-4">
+        <CardTitle>Post 10</CardTitle>
+        <CardDescription>25/04/2024, 9:34</CardDescription>
+        <CardContent>
+          This layout (infrastructure folder, mentioned previous post) is kinda
+          good. I have a few problems now because I have removed all my token
+          tables and merged them onto one and added a field called type.
+          <pre>
+            {`
+  ├── tokens
+  │   ├── id:    string
+  │   ├── email: string
+  │   ├── token: string
+  │   ├── type:  "VERIFICATION" | "TWO_FACTOR" | "PASSWORD_RESET"
+  │   └── date:  Date
   └── 
     `}
           </pre>
