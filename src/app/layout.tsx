@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter as FontSans } from "next/font/google";
+import { Fredoka as FontSans } from "next/font/google";
 
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";

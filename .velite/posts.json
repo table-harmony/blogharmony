@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "blog/first-post",
+    "title": "My first post",
+    "description": "I dont know some nonsense",
+    "date": "2024-04-26T00:00:00.000Z",
+    "published": true,
+    "author": "Liron kaner",
+    "tags": [
+      "code"
+    ],
+    "body": "const{jsx:n}=arguments[0];function _createMdxContent(t){const e={p:\"p\",...t.components};return n(e.p,{children:\"Some content I dont care\"})}return{default:function(t={}){const{wrapper:e}=t.components||{};return e?n(e,{...t,children:n(_createMdxContent,{...t})}):_createMdxContent(t)}};",
+    "slugAsParams": "first-post"
+  }
+]

@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "lyron is iron",
   url: "https://lyronisiron.vercel.app",
+  author: "liron kaner",
   description: "My blog",
   links: {
     github: "https://github.com/liron1111",
