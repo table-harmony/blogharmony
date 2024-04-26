@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useMDXComponent } from "@/hooks/use-mdx";
 
 const components = {
   Image,
+  Link,
 };
 
 interface MdxProps {

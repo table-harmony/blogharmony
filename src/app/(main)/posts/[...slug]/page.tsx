@@ -16,6 +16,8 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { SlashIcon } from "lucide-react";
+import { slug } from "github-slugger";
+import Link from "next/link";
 
 interface PostPageProps {
   params: {
@@ -63,35 +65,27 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="container py-6 max-w-3xl mx-auto">
-      <div className="flex flex-col gap-4">
-        <header className="flex flex-col gap-2">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <time dateTime={post.date} className="text-xs">
-                  {formatDate(post.date)}
-                </time>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator>
-                <SlashIcon />
-              </BreadcrumbSeparator>
-              <BreadcrumbItem className="text-xs">{post.author}</BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <h1 className="text-3xl font-medium">{post.title}</h1>
-          <div className="flex gap-2 mb-2">
-            {post.tags?.map((tag) => (
-              <Tag tag={tag} key={tag} />
-            ))}
-          </div>
-          {post.description && (
-            <p className="mt-0 text-muted-foreground">{post.description}</p>
-          )}
-        </header>
-        <Separator />
-        <MDXContent code={post.body} />
+    <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
+      <div className="text-sm">
+        <time dateTime={post.date}>{formatDate(post.date)}</time> /{" "}
+        <Link
+          href={"/authors/" + slug(post.author)}
+          className="underline-offset-4"
+        >
+          {post.author}
+        </Link>
       </div>
+      <h1 className="my-4">{post.title}</h1>
+      <div className="flex gap-2 mb-2">
+        {post.tags?.map((tag) => (
+          <Tag tag={tag} key={tag} />
+        ))}
+      </div>
+      {post.description && (
+        <p className="mt-0 text-muted-foreground">{post.description}</p>
+      )}
+      <Separator className="my-4" />
+      <MDXContent code={post.body} />
     </article>
   );
 }

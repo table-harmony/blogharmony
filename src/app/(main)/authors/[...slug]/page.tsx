@@ -55,23 +55,16 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="container py-6 max-w-3xl mx-auto">
-      <div className="flex flex-col gap-4">
-        <header className="flex flex-col gap-2">
-          <time
-            dateTime={author.date}
-            className="text-muted-foreground text-xs"
-          >
-            {formatDate(author.date)}
-          </time>
-          <h1 className="text-3xl font-medium">{author.name}</h1>
-          {author.description && (
-            <p className="mt-0 text-muted-foreground">{author.description}</p>
-          )}
-        </header>
-        <Separator />
-        <MDXContent code={author.body} />
-      </div>
+    <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
+      <time dateTime={author.date} className="text-sm">
+        {formatDate(author.date)}
+      </time>
+      <h1 className="my-4">{author.name}</h1>
+      {author.description && (
+        <p className="mt-0 text-muted-foreground">{author.description}</p>
+      )}
+      <Separator className="my-4" />
+      <MDXContent code={author.body} />
     </article>
   );
 }

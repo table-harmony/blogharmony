@@ -23,22 +23,20 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-        >
-          <ContextProvider>
-            <div className="relative flex min-h-screen flex-col bg-background">
-              {children}
-            </div>
-          </ContextProvider>
-        </body>
-      </html>
-    </>
+    <html lang="en" className="scroll-pt-[5rem]">
+      <head />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ContextProvider>
+          <div className="relative flex min-h-screen flex-col bg-background">
+            {children}
+          </div>
+        </ContextProvider>
+      </body>
+    </html>
   );
 }
