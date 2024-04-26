@@ -22,23 +22,6 @@ export function SiteFooter() {
               <span className="sr-only">GitHub</span>
             </div>
           </Link>
-          <Link
-            href={siteConfig.links.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div
-              className={cn(
-                buttonVariants({
-                  variant: "ghost",
-                }),
-                "w-9 px-0"
-              )}
-            >
-              <LinkedinIcon className="h-4 w-4" />
-              <span className="sr-only">LinkedIn</span>
-            </div>
-          </Link>
         </nav>
       </div>
     </footer>

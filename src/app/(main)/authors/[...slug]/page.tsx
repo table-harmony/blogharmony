@@ -1,4 +1,4 @@
-import "@/app/mdx.css";
+import "@/styles/mdx.css";
 
 import { authors } from "#site/content";
 import { formatDate } from "@/lib/utils";
@@ -6,16 +6,8 @@ import { formatDate } from "@/lib/utils";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Tag } from "@/components/tag";
 import { Separator } from "@/components/ui/separator";
 import { MDXContent } from "@/components/mdx-components";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { SlashIcon } from "lucide-react";
 
 interface PostPageProps {
   params: {

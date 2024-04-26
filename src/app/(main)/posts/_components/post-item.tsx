@@ -3,13 +3,7 @@ import { cn, formatDate } from "@/lib/utils";
 
 import { Tag } from "@/components/tag";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { ArrowRightIcon, SlashIcon } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 
 interface PostItemProps {
   slug: string;
@@ -42,18 +36,8 @@ export function PostItem({
       <div className="flex justify-between items-center">
         <dl>
           <dt className="sr-only">Published On</dt>
-          <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <time dateTime={date}>{formatDate(date)}</time>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator>
-                  <SlashIcon />
-                </BreadcrumbSeparator>
-                <BreadcrumbItem>{author}</BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
+          <dd className="text-xs md:text-base font-medium flex items-center gap-1">
+            {author}, <time dateTime={date}>{formatDate(date)}</time>
           </dd>
         </dl>
         <Link

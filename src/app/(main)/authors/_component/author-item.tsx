@@ -21,7 +21,7 @@ export function AuthorItem({ slug, name, description, date }: PostItemProps) {
       <div className="flex justify-between items-center">
         <dl>
           <dt className="sr-only">Published On</dt>
-          <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
+          <dd className="text-xs md:text-base font-medium flex items-center gap-1">
             Started on:
             <time dateTime={date}>{formatDate(date)}</time>
           </dd>
