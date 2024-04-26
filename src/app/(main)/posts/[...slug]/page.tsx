@@ -1,10 +1,12 @@
 import "@/app/mdx.css";
-import { Metadata } from "next";
+
 import { posts } from "#site/content";
-import { notFound } from "next/navigation";
 import { formatDate } from "@/lib/utils";
 
-import { Tag } from "../_components/tag";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+import { Tag } from "@/components/tag";
 import { Separator } from "@/components/ui/separator";
 import { MDXContent } from "@/components/mdx-components";
 import {
@@ -67,12 +69,14 @@ export default async function PostPage({ params }: PostPageProps) {
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <time dateTime={post.date}>{formatDate(post.date)}</time>
+                <time dateTime={post.date} className="text-xs">
+                  {formatDate(post.date)}
+                </time>
               </BreadcrumbItem>
               <BreadcrumbSeparator>
                 <SlashIcon />
               </BreadcrumbSeparator>
-              <BreadcrumbItem>{post.author}</BreadcrumbItem>
+              <BreadcrumbItem className="text-xs">{post.author}</BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
           <h1 className="text-3xl font-medium">{post.title}</h1>

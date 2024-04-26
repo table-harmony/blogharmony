@@ -1,5 +1,5 @@
 import { posts } from "#site/content";
-import { sortPosts } from "@/lib/utils";
+import { sortPosts } from "@/lib/blog";
 
 import { PostItem } from "./_components/post-item";
 import { Separator } from "@/components/ui/separator";
@@ -11,7 +11,7 @@ interface BlogPageProps {
   };
 }
 
-export default async function BlogPage({ searchParams }: BlogPageProps) {
+export default async function PostsPage({ searchParams }: BlogPageProps) {
   const POSTS_PER_PAGE = 5;
 
   const currentPage = Number(searchParams?.page) || 1;
@@ -28,9 +28,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <div className="flex flex-col gap-4">
         <header className="flex flex-col items-start gap-2">
           <h1 className="inline-block font-semibold text-4xl lg:text-5xl">
-            Blog
+            Posts
           </h1>
-          <p className="text-xl text-muted-foreground">My nonsenses: </p>
+          <p className="text-xl text-muted-foreground">A bunch of nonsense: </p>
         </header>
         <Separator />
         <section>
@@ -40,6 +40,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             <ul className="flex flex-col">
               {displayPosts.map((post) => {
                 const { slug, date, title, description, author, tags } = post;
+
                 return (
                   <li key={slug}>
                     <PostItem

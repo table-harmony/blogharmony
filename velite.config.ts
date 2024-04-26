@@ -10,7 +10,7 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
 
 const posts = defineCollection({
   name: "Post",
-  pattern: "blog/**/*.mdx",
+  pattern: "posts/**/*.mdx",
   schema: s
     .object({
       slug: s.path(),
@@ -25,6 +25,21 @@ const posts = defineCollection({
     .transform(computedFields),
 });
 
+const authors = defineCollection({
+  name: "Author",
+  pattern: "authors/**/*.mdx",
+  schema: s
+    .object({
+      slug: s.path(),
+      name: s.string().max(99),
+      date: s.isodate(),
+      description: s.string().max(999).optional(),
+      published: s.boolean().default(true),
+      body: s.mdx(),
+    })
+    .transform(computedFields),
+});
+
 export default defineConfig({
   root: "src/content",
   output: {
@@ -34,7 +49,7 @@ export default defineConfig({
     name: "[name]-[hash:6].[ext]",
     clean: true,
   },
-  collections: { posts },
+  collections: { posts, authors },
   mdx: {
     rehypePlugins: [
       rehypeSlug,

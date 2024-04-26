@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { cn, formatDate } from "@/lib/utils";
+
+import { Tag } from "@/components/tag";
 import { buttonVariants } from "@/components/ui/button";
-import { Tag } from "@/app/(main)/blog/_components/tag";
-import { ArrowRightIcon, Calendar } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { SlashIcon } from "lucide-react";
+import { ArrowRightIcon, SlashIcon } from "lucide-react";
 
 interface PostItemProps {
   slug: string;
@@ -30,7 +30,7 @@ export function PostItem({
 }: PostItemProps) {
   return (
     <article className="flex flex-col gap-2 border-border border-b py-3">
-      <h2 className="text-2xl font-bold">
+      <h2 className="text-2xl font-medium">
         <Link href={"/" + slug}>{title}</Link>
       </h2>
       <div className="flex gap-2">

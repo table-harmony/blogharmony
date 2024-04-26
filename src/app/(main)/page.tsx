@@ -11,13 +11,16 @@ export default function Home() {
   return (
     <main className="container flex flex-col gap-4">
       <PageHeader>
-        <PageHeaderHeading>Welcome to my blog</PageHeaderHeading>
+        <PageHeaderHeading>Welcome to HarmonyBlog</PageHeaderHeading>
         <PageHeaderDescription>
-          Weird. Awkward. Nonsense about my process as a web developer.
+          Weird. Awkward. Nonsense about the process of a web developer.
         </PageHeaderDescription>
         <PageActions>
+          <Button asChild>
+            <Link href="/posts">View Posts</Link>
+          </Button>
           <Button variant="outline" asChild>
-            <Link href="/blog">Get started</Link>
+            <Link href="/authors">To our authors</Link>
           </Button>
         </PageActions>
       </PageHeader>

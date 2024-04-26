@@ -1,0 +1,11 @@
+[
+  {
+    "slug": "authors/liron-kaner",
+    "name": "Liron kaner",
+    "date": "2024-04-26T00:00:00.000Z",
+    "description": "Web developer",
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(r){const c={p:\"p\",...r.components};return t(e,{children:[n(c.p,{children:\"Hello, my name is Liron kaner.\"}),\"\\n\",n(c.p,{children:\"I have created this website.\"})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "slugAsParams": "liron-kaner"
+  }
+]

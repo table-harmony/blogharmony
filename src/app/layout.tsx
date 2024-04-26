@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Fredoka as FontSans } from "next/font/google";
+import { Rubik as FontSans } from "next/font/google";
 
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
