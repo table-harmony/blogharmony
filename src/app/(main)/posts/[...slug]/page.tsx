@@ -5,12 +5,13 @@ import { formatDate } from "@/lib/utils";
 
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 import { Tag } from "@/components/tag";
 import { Separator } from "@/components/ui/separator";
 import { MDXContent } from "@/components/mdx-components";
+import { CommentList } from "../_components/comment-list";
 import { slug } from "github-slugger";
-import Link from "next/link";
 
 interface PostPageProps {
   params: {
@@ -79,6 +80,7 @@ export default async function PostPage({ params }: PostPageProps) {
       )}
       <Separator className="my-4" />
       <MDXContent code={post.body} />
+      <CommentList post={post.title} />
     </article>
   );
 }
