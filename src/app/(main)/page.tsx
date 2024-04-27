@@ -13,7 +13,7 @@ export default function Home() {
       <PageHeader>
         <PageHeaderHeading>Welcome to HarmonyBlog</PageHeaderHeading>
         <PageHeaderDescription>
-          Weird. Awkward. Nonsense about the process of a web developer.
+          Weird. Nonsense. Boring stuff about coding.
         </PageHeaderDescription>
         <PageActions>
           <Button asChild>

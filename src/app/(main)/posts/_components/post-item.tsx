@@ -29,17 +29,22 @@ export function PostItem({
           <Tag tag={tag} key={tag} />
         ))}
       </div>
-      <div className="max-w-none text-muted-foreground">{description}</div>
+      <div className="text-xs md:text-base text-muted-foreground">
+        {description}
+      </div>
       <div className="flex justify-between items-center">
         <dl>
           <dt className="sr-only">Published On</dt>
-          <dd className="text-xs md:text-base font-medium flex items-center gap-1">
+          <dd className="text-xs font-medium hidden md:flex items-center gap-1">
             {author}, <time dateTime={date}>{formatDate(date)}</time>
           </dd>
         </dl>
         <Link
           href={"/" + slug}
-          className={cn(buttonVariants({ variant: "link" }), "py-0")}
+          className={cn(
+            buttonVariants({ variant: "link" }),
+            "py-0 text-xs font-medium"
+          )}
         >
           Read more →
         </Link>

@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Rubik as FontSans } from "next/font/google";
 
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { siteConfig } from "@/config/site";
 
 import { cn } from "@/lib/utils";
@@ -15,6 +15,14 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url),
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 interface RootLayoutProps {

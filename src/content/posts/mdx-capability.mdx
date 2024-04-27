@@ -24,15 +24,15 @@ the popularity of its themes ecosystem — use any VS Code theme you want!
 Draw attention to a particular line of code.
 
 ```js {4} showLineNumbers
-import { useFloating } from "@floating-ui/react";
+import { useState } from "react";
 
 function MyComponent() {
-  const { refs, floatingStyles } = useFloating();
+  const [count, setCount] = useState();
 
   return (
     <>
-      <div ref={refs.setReference} />
-      <div ref={refs.setFloating} style={floatingStyles} />
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count++)}>increment count</button>
     </>
   );
 }
