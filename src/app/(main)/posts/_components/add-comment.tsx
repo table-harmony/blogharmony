@@ -17,14 +17,13 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
 
 interface AddCommentFormProps {
   post: string;
 }
 
 const formSchema = z.object({
-  body: z.string().min(2).max(50),
+  body: z.string().min(1).max(999),
 });
 
 export const AddCommentForm = ({ post }: AddCommentFormProps) => {
@@ -84,19 +83,7 @@ export const AddCommentForm = ({ post }: AddCommentFormProps) => {
             </FormItem>
           )}
         />
-        <div
-          className={
-            !form.getValues().body ? "hidden" : "flex justify-end gap-2"
-          }
-        >
-          <Button
-            disabled={isPending}
-            onClick={() => form.reset()}
-            variant="outline"
-            size="sm"
-          >
-            Cancel
-          </Button>
+        <div className={!form.getValues().body ? "hidden" : "flex justify-end"}>
           <Button disabled={isPending} type="submit" size="sm">
             Comment
           </Button>

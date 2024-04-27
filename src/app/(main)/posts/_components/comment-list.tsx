@@ -5,7 +5,7 @@ import { AddCommentForm } from "./add-comment";
 import { SignedIn } from "@clerk/nextjs";
 
 export async function CommentList({ post }: { post: string }) {
-  const comments = await getCommentsByPost(post);
+  const comments = (await getCommentsByPost(post)).reverse();
 
   return (
     <div>
@@ -16,10 +16,15 @@ export async function CommentList({ post }: { post: string }) {
       {comments.length !== 0 && (
         <div className="flex flex-col">
           {comments.map((comment) => {
-            const { createdAt, body, author } = comment;
+            const { id, createdAt, body, author } = comment;
             return (
               <span key={comment.id}>
-                <Comment createdAt={createdAt} body={body} author={author} />
+                <Comment
+                  id={id}
+                  createdAt={createdAt}
+                  body={body}
+                  author={author}
+                />
               </span>
             );
           })}
