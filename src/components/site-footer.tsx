@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+
 import { buttonVariants } from "@/components/ui/button";
-import { GithubIcon, LinkedinIcon } from "lucide-react";
+import { Icons } from "./icons";
 
 export function SiteFooter() {
   return (
@@ -18,7 +20,7 @@ export function SiteFooter() {
                 "w-9 px-0"
               )}
             >
-              <GithubIcon className="h-4 w-4" />
+              <Icons.gitHub className="h-4 w-4" />
               <span className="sr-only">GitHub</span>
             </div>
           </Link>
