@@ -1,4 +1,4 @@
-import "@/styles/mdx.css";
+import "@/app/mdx.css";
 
 import { authors } from "#site/content";
 import { formatDate } from "@/lib/utils";

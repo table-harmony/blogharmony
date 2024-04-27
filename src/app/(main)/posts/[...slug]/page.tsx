@@ -1,4 +1,4 @@
-import "@/styles/mdx.css";
+import "@/app/mdx.css";
 
 import { posts } from "#site/content";
 import { formatDate } from "@/lib/utils";
@@ -9,13 +9,6 @@ import { notFound } from "next/navigation";
 import { Tag } from "@/components/tag";
 import { Separator } from "@/components/ui/separator";
 import { MDXContent } from "@/components/mdx-components";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { SlashIcon } from "lucide-react";
 import { slug } from "github-slugger";
 import Link from "next/link";
 
