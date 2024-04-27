@@ -2,7 +2,6 @@ import Link from "next/link";
 import { cn, formatDate } from "@/lib/utils";
 
 import { buttonVariants } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
 
 interface PostItemProps {
   slug: string;
@@ -30,7 +29,7 @@ export function AuthorItem({ slug, name, description, date }: PostItemProps) {
           href={"/" + slug}
           className={cn(buttonVariants({ variant: "link" }), "py-0")}
         >
-          Read more <ArrowRightIcon className="h-4 w-4 ml-1" />
+          Read more →
         </Link>
       </div>
     </article>
