@@ -13,11 +13,49 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Author {
+  id       String     @id @default(auto()) @map("_id") @db.ObjectId
+  email    String     @unique
+  name     String
+  joinedAt DateTime   @default(now()) 
+  
+  posts    Post[]
+
+  bio      Bio?
+}
+
+model Bio {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  body      String
+  createdAt DateTime  @default(now())
+  published Boolean   @default(false)
+
+  author    Author    @relation(fields: [authorId], references: [id])
+  authorId  String    @unique @db.ObjectId
+}
+
+
+model Post {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  body      String
+  createdAt DateTime  @default(now())
+  published Boolean   @default(false)
+
+  author    Author    @relation(fields: [authorId], references: [id])
+  authorId  String    @db.ObjectId
+  
+  comments Comment[]
+}
+
 
 model Comment {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  createdAt   DateTime @default(now())
-  body        String
-  author      String 
-  post        String
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  comment     String
+  createdAt   DateTime  @default(now())
+  authorEmail String 
+
+  post        Post      @relation(fields: [postId], references: [id])
+  postId      String    @db.ObjectId
 }
