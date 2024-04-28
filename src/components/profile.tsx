@@ -1,18 +1,19 @@
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignInButton, UserButton } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 
 import { Button } from "@/components/ui/button";
 
 export async function Profile() {
+  const user = await currentUser();
+
   return (
     <>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-      <SignedOut>
+      {user && <UserButton />}
+      {!user && (
         <SignInButton>
           <Button size="sm">Sign in</Button>
         </SignInButton>
-      </SignedOut>
+      )}
     </>
   );
 }

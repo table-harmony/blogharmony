@@ -2,7 +2,6 @@
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Toaster } from "@/components/ui/toaster";
 
 export function ContextProvider({ children }: { children: React.ReactNode }) {
   return (
@@ -14,7 +13,6 @@ export function ContextProvider({ children }: { children: React.ReactNode }) {
         disableTransitionOnChange
       >
         {children}
-        <Toaster />
       </ThemeProvider>
     </ClerkProvider>
   );

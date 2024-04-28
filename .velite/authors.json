@@ -1,0 +1,11 @@
+[
+  {
+    "slug": "authors/liron-kaner",
+    "name": "Liron kaner",
+    "date": "2024-04-26T00:00:00.000Z",
+    "description": "Web developer",
+    "published": true,
+    "body": "const{Fragment:e,jsx:n,jsxs:r}=arguments[0];function _createMdxContent(t){const o={a:\"a\",br:\"br\",h2:\"h2\",p:\"p\",...t.components},{Link:a}=o;return a||function(e,n){throw new Error(\"Expected \"+(n?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\")}(\"Link\",!0),r(e,{children:[r(o.p,{children:[\"Hello, I am Liron kaner. \",n(o.br,{}),\"\\n\",\"I am 17 years old and currently trying to learn web development.\"]}),\"\\n\",n(o.h2,{id:\"my-projects\",children:n(o.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#my-projects\",children:\"My projects:\"})}),\"\\n\",n(a,{href:\"https://github.com/liron1111/tableharmony\",className:\"underline-offset-4\",children:n(o.p,{children:\"tableharmony\"})}),\"\\n\",n(o.p,{children:\"Blazingly-fast and highly-interactive bagrut project at the Alliance school Computer\\r\\nscience program.\"}),\"\\n\",n(a,{href:\"https://github.com/liron1111/blog\",className:\"underline-offset-4\",children:n(o.p,{children:\"harmonyblog\"})}),\"\\n\",r(o.p,{children:[\"Super cool and boring blog meant to display my passion and knowledge at web development\\r\\nusing techonlogies such as \",n(o.a,{href:\"https://nextjs.org\",children:\"Next.js\"}),\", \",n(o.a,{href:\"https://ui.shadcn.com\",children:\"shadcn-ui\"}),\"\\r\\nand more.\"]})]})}return{default:function(e={}){const{wrapper:r}=e.components||{};return r?n(r,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "slugAsParams": "liron-kaner"
+  }
+]
