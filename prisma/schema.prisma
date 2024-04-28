@@ -37,17 +37,16 @@ model Bio {
 
 
 model Post {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  title       String
-  description String
-  body        String
-  createdAt   DateTime  @default(now())
-  published   Boolean   @default(false)
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  body      String
+  createdAt DateTime  @default(now())
+  published Boolean   @default(false)
 
-  author      Author    @relation(fields: [authorId], references: [id])
-  authorId    String    @db.ObjectId
+  author    Author    @relation(fields: [authorId], references: [id])
+  authorId  String    @db.ObjectId
   
-  comments    Comment[]
+  comments Comment[]
 }
 
 
