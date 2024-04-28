@@ -1,23 +1,23 @@
-import { authors } from "#site/content";
+import { getAuthors } from "@/db/utils";
 
-import { AuthorItem } from "./_component/author-item";
-import { QueryPagination } from "@/components/query-pagination";
+import { AuthorItem } from "./_components/author-item";
 import { Separator } from "@/components/ui/separator";
+import { QueryPagination } from "@/components/query-pagination";
 
-interface BlogPageProps {
+interface AuthorsPageProps {
   searchParams: {
     page?: string;
   };
 }
 
-export default async function AuthorsPage({ searchParams }: BlogPageProps) {
+export default async function AuthorsPage({ searchParams }: AuthorsPageProps) {
   const AUTHORS_PER_PAGE = 5;
 
   const currentPage = Number(searchParams?.page) || 1;
-  const sortedAuthors = authors;
-  const totalPages = Math.ceil(sortedAuthors.length / AUTHORS_PER_PAGE);
+  const authors = await getAuthors();
+  const totalPages = Math.ceil(authors.length / AUTHORS_PER_PAGE);
 
-  const displayAuthors = sortedAuthors.slice(
+  const displayAuthors = authors.slice(
     AUTHORS_PER_PAGE * (currentPage - 1),
     AUTHORS_PER_PAGE * currentPage
   );
@@ -40,14 +40,14 @@ export default async function AuthorsPage({ searchParams }: BlogPageProps) {
           ) : (
             <ul className="flex flex-col">
               {displayAuthors.map((author) => {
-                const { slug, name, date, description } = author;
+                const { id, email, name, joinedAt } = author;
                 return (
-                  <li key={slug}>
+                  <li key={id}>
                     <AuthorItem
-                      slug={slug}
-                      date={date}
+                      id={id}
+                      email={email}
                       name={name}
-                      description={description}
+                      joinedAt={joinedAt}
                     />
                   </li>
                 );

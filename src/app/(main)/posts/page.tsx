@@ -1,24 +1,23 @@
-import { posts } from "#site/content";
-import { sortPosts } from "@/lib/blog";
+import { getPosts } from "@/db/utils";
 
 import { PostItem } from "./_components/post-item";
 import { Separator } from "@/components/ui/separator";
 import { QueryPagination } from "@/components/query-pagination";
 
-interface BlogPageProps {
+interface PostsPageProps {
   searchParams: {
     page?: string;
   };
 }
 
-export default async function PostsPage({ searchParams }: BlogPageProps) {
+export default async function PostsPage({ searchParams }: PostsPageProps) {
   const POSTS_PER_PAGE = 5;
 
   const currentPage = Number(searchParams?.page) || 1;
-  const sortedPosts = sortPosts(posts.filter((post) => post.published));
-  const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+  const posts = await getPosts();
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 
-  const displayPosts = sortedPosts.slice(
+  const displayPosts = posts.slice(
     POSTS_PER_PAGE * (currentPage - 1),
     POSTS_PER_PAGE * currentPage
   );
@@ -39,17 +38,15 @@ export default async function PostsPage({ searchParams }: BlogPageProps) {
           ) : (
             <ul className="flex flex-col">
               {displayPosts.map((post) => {
-                const { slug, date, title, description, author, tags } = post;
+                const { id, title, description, createdAt } = post;
 
                 return (
-                  <li key={slug}>
+                  <li key={id}>
                     <PostItem
-                      slug={slug}
-                      date={date}
+                      id={id}
                       title={title}
                       description={description}
-                      author={author}
-                      tags={tags}
+                      createdAt={createdAt}
                     />
                   </li>
                 );

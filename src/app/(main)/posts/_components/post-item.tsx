@@ -1,34 +1,19 @@
 import Link from "next/link";
-import { cn, formatDate } from "@/lib/utils";
 
-import { Tag } from "@/components/tag";
 import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface PostItemProps {
-  slug: string;
+  id: string;
   title: string;
-  description?: string;
-  date: string;
-  author: string;
-  tags?: Array<string>;
+  description: string;
+  createdAt: Date;
 }
 
-export function PostItem({
-  slug,
-  title,
-  description,
-  date,
-  author,
-  tags,
-}: PostItemProps) {
+export function PostItem({ id, title, description, createdAt }: PostItemProps) {
   return (
     <article className="flex flex-col gap-2 border-border border-b py-3">
       <h2 className="text-2xl font-medium">{title}</h2>
-      <div className="flex gap-2">
-        {tags?.map((tag) => (
-          <Tag tag={tag} key={tag} />
-        ))}
-      </div>
       <div className="text-xs md:text-base text-muted-foreground">
         {description}
       </div>
@@ -36,11 +21,11 @@ export function PostItem({
         <dl>
           <dt className="sr-only">Published On</dt>
           <dd className="text-xs font-medium hidden md:flex items-center gap-1">
-            {author}, <time dateTime={date}>{formatDate(date)}</time>
+            {createdAt.toLocaleDateString()}
           </dd>
         </dl>
         <Link
-          href={"/" + slug}
+          href={"/posts/" + id}
           className={cn(
             buttonVariants({ variant: "link" }),
             "py-0 text-xs font-medium"
