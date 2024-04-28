@@ -31,7 +31,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="scroll-pt-[5rem]">
+    <html lang="en">
       <head />
       <body
         className={cn(

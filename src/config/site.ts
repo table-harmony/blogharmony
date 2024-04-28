@@ -4,7 +4,7 @@ export const siteConfig = {
   author: "liron kaner",
   description: "blog",
   links: {
-    github: "https://github.com/liron1111/blog",
+    github: "https://github.com/liron1111/harmonyblog",
   },
 };
 
