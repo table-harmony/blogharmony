@@ -1,16 +1,18 @@
-import Link from "next/link";
-
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-
+import Link from "next/link";
+import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
-import { Icons } from "./icons";
 
 export function SiteFooter() {
   return (
-    <footer className="py-4 mt-4 md:px-4 md:py-0">
-      <div className="container flex items-center justify-end md:h-20">
-        <nav className="flex items-center gap-2">
+    <footer className="py-4 mt-4 md:px-4 md:py-0 bg-background">
+      <div className="container flex flex-col-reverse items-center justify-between gap-4 md:h-20 md:flex-row">
+        <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
+          Blog side project, built by{" "}
+          <span className="font-medium">Liron Kaner</span>.
+        </p>
+        <nav className="flex gap-2">
           <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
             <div
               className={cn(
