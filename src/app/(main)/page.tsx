@@ -8,7 +8,7 @@ export default function HomePage() {
     <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
       <div className="container flex items-center flex-col gap-4">
         <h1 className="text-center text-3xl font-black text-balance md:text-5xl">
-          Welcome to HarmonyBlog
+          Welcome to BlogHarmony
         </h1>
         <p className="max-w-[500px] text-center text-lg text-muted-foreground">
           Discover practical tips, inspiring stories, and expert insights on

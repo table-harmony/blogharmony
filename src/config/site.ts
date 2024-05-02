@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "HarmonyBlog",
-  url: "https://harmonyblog.vercel.app",
+  name: "blogharmony",
+  url: "https://blogharmony.vercel.app",
   author: "liron kaner",
   description: "blog",
   links: {
-    github: "https://github.com/liron1111/harmonyblog",
+    github: "https://github.com/table-harmony/blogharmony",
   },
 };
 
