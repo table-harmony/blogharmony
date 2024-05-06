@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Icons } from "@/components/icons";
-import { AlignRightIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -22,11 +22,11 @@ export function MobileNav() {
           variant="ghost"
           className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
-          <AlignRightIcon />
+          <MenuIcon />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="pr-0">
+      <SheetContent side="left" className="pr-0">
         <MobileLink
           href="/"
           className="flex items-center"
