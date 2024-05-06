@@ -1,4 +1,11 @@
+import { siteConfig } from "@/config/site";
 import TermsOfService from "../_markdown/terms-of-service.mdx";
+
+export async function generateMetadata() {
+  return {
+    title: `Terms of service | ${siteConfig.name}`,
+  };
+}
 
 export default function PrivacyPolicyPage() {
   return (

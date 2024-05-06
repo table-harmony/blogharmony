@@ -10,7 +10,7 @@ export async function Profile() {
       </SignedIn>
       <SignedOut>
         <SignInButton>
-          <Button size="sm">Sign in</Button>
+          <Button size="sm">Get started</Button>
         </SignInButton>
       </SignedOut>
     </>

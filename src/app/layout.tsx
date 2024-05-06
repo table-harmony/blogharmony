@@ -13,9 +13,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
+  title: `${siteConfig.name} | ${siteConfig.description}`,
   metadataBase: new URL(siteConfig.url),
+  description: siteConfig.description,
 };
 
 export const viewport: Viewport = {

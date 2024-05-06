@@ -20,13 +20,13 @@ export function MobileNav() {
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
         >
           <MenuIcon />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="pr-0">
+      <SheetContent side="right" className="pr-0">
         <MobileLink
           href="/"
           className="flex items-center"
@@ -37,18 +37,18 @@ export function MobileNav() {
         </MobileLink>
         <div className="flex flex-col gap-3 mt-3">
           <MobileLink
-            href="/posts"
+            href="/#faq"
             className="flex items-center"
             onOpenChange={setOpen}
           >
-            Posts
+            FAQ
           </MobileLink>
           <MobileLink
-            href="/authors"
+            href="/#plans"
             className="flex items-center"
             onOpenChange={setOpen}
           >
-            authors
+            Plans
           </MobileLink>
         </div>
       </SheetContent>
