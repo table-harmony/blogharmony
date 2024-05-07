@@ -15,15 +15,15 @@ export function Reasons() {
           <List>
             <ListItem>
               <XIcon className="w-4 h-4 text-red-600 dark:text-red-300 mr-2" />
-              Easily accessed
+              Struggle to recall on your favorite topics
             </ListItem>
             <ListItem>
               <XIcon className="w-4 h-4 text-red-600 dark:text-red-300 mr-2" />
-              Beautifully designed interface
+              Waste time catching up where you left off
             </ListItem>
             <ListItem>
               <XIcon className="w-4 h-4 text-red-600 dark:text-red-300 mr-2" />
-              Highly informational
+              Overwhelmed by all your hobbies
             </ListItem>
           </List>
         </CardContent>

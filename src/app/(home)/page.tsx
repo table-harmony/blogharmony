@@ -1,16 +1,17 @@
 import Link from "next/link";
 import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
+import { siteConfig } from "@/config/site";
+
 import { ArrowRightIcon, CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { Header } from "@/components/header";
+import { List, ListItem } from "@/components/list";
+import { NeonCard } from "@/components/neon-card";
 import { Faq } from "./_components/faq";
 import { Plans } from "./_components/plans";
 import { Reasons } from "./_components/reasons";
-import { Header } from "../../components/header";
-import { List, ListItem } from "@/components/list";
 import { JoinCard } from "./_components/join";
-import { siteConfig } from "@/config/site";
 
 export default function HomePage() {
   return (
@@ -84,8 +85,13 @@ export default function HomePage() {
         </div>
       </section>
       <section>
-        <div className="mx-auto w-full container flex justify-center px-4 lg:px-20 pt-12 pb-24 md:py-20">
-          <JoinCard />
+        <div className="container flex flex-col md:flex-row md:justify-center px-4 lg:px-20 pt-12 pb-24 md:py-20">
+          <NeonCard
+            className="flex items-center justify-center max-w-3xl"
+            gradient="bg-gradient-to-r from-purple-500 to-purple-600"
+          >
+            <JoinCard />
+          </NeonCard>
         </div>
       </section>
     </div>
