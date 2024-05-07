@@ -9,6 +9,8 @@ import { Plans } from "./_components/plans";
 import { Reasons } from "./_components/reasons";
 import { Header } from "../../components/header";
 import { List, ListItem } from "@/components/list";
+import { JoinCard } from "./_components/join";
+import { siteConfig } from "@/config/site";
 
 export default function HomePage() {
   return (
@@ -17,7 +19,7 @@ export default function HomePage() {
         <div className="mx-auto w-full ctainer px-4 lg:px-20 flex flex-col items-center justify-between gap-10 pt-12 pb-24 md:py-20">
           <div className="w-full flex flex-col items-center justify-center text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance">
-              Engage & Discover: Explore creativity in all topics
+              {siteConfig.description}
             </h1>
             <p className="max-w-xl md:text-lg text-muted-foreground">
               Delivers impactful and attention-grabbing information about all
@@ -79,6 +81,11 @@ export default function HomePage() {
         <div className="pt-16 mx-auto w-full container px-4 lg:px-20 flex flex-col items-center justify-center pb-10 md:pb-0">
           <Header title="Plans" subtitle="Become a participent" />
           <Plans />
+        </div>
+      </section>
+      <section>
+        <div className="mx-auto w-full container flex justify-center px-4 lg:px-20 pt-12 pb-24 md:py-20">
+          <JoinCard />
         </div>
       </section>
     </div>
