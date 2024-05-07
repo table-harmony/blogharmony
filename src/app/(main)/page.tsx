@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Faq } from "./_components/faq";
 import { Plans } from "./_components/plans";
 import { Reasons } from "./_components/reasons";
-import { Header } from "./_components/header";
+import { Header } from "../../components/header";
 import { List, ListItem } from "@/components/list";
 
 export default function HomePage() {
@@ -56,10 +56,7 @@ export default function HomePage() {
           </>
         </div>
       </section>
-      <section
-        id="reasons"
-        className="flex items-center justify-center bg-orange-300 dark:bg-background"
-      >
+      <section id="reasons" className="flex items-center justify-center">
         <div className="pt-16 mx-auto w-full container px-4 lg:px-20 flex flex-col items-center justify-center pb-10 md:py-16 mb-10 md:pb-0">
           <Header
             title="Reasons"

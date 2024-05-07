@@ -7,7 +7,7 @@ import {
 
 export function Faq() {
   return (
-    <Accordion type="single" collapsible className="mt-6 md:w-96">
+    <Accordion type="multiple" className="mt-6 md:w-96">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>

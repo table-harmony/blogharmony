@@ -1,5 +1,5 @@
 import { CheckIcon } from "lucide-react";
-import { SignInButton } from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { List, ListItem } from "@/components/list";
+import Link from "next/link";
 
 export function Plans() {
   return (
@@ -34,9 +35,16 @@ export function Plans() {
           </List>
         </CardContent>
         <CardFooter>
-          <SignInButton>
-            <Button className="w-full">Sign in to start</Button>
-          </SignInButton>
+          <SignedOut>
+            <SignInButton>
+              <Button className="w-full">Sign in to start</Button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <Button className="w-full" asChild>
+              <Link href="/dashboard">Sign in to start</Link>
+            </Button>
+          </SignedIn>
         </CardFooter>
       </Card>
       <Card className="border border-primary rounded-md p-6">
@@ -60,9 +68,7 @@ export function Plans() {
           </List>
         </CardContent>
         <CardFooter>
-          <Button className="w-full border-primary" variant="outline">
-            Become an author
-          </Button>
+          <Button className="w-full">Become an author</Button>
         </CardFooter>
       </Card>
     </div>

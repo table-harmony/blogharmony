@@ -1,6 +1,6 @@
 import { SiteFooter } from "@/components/site-footer";
 
-export default function LegalLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
