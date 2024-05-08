@@ -4,7 +4,7 @@ import {
   MainSection,
   PlansSection,
   ReasonsSection,
-} from "./_components/sections";
+} from "./sections";
 
 export default function HomePage() {
   return (

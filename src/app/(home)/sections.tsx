@@ -18,7 +18,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
 import { Title } from "@/components/title";
 
 import { ArrowRightIcon, CheckIcon, XIcon } from "lucide-react";
@@ -73,28 +72,28 @@ export function ReasonsSection() {
       <div className="container lg:px-20 pt-12 pb-24 md:py-20 flex flex-col items-center">
         <Title
           title="Reasons"
-          subtitle="Tired of not getting up... up... updated on your favorite topics ?"
+          subtitle="Tired of not getting updated on your favorite topics ?"
           className="text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8 md:py-16">
-          <Card className="border border-red-600 dark:border-red-300 rounded-md p-6 bg-red-400/5">
+          <Card className="border border-red-600 rounded-md p-6 bg-red-400/5">
             <CardHeader>
-              <CardTitle className="text-red-600 dark:text-red-300">
+              <CardTitle className="text-red-600">
                 Without BlogHarmony
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="leading-relaxed space-y-1.5">
                 <li className="flex items-center">
-                  <XIcon className="w-4 h-4 text-red-600 dark:text-red-300 mr-2" />
+                  <XIcon className="w-4 h-4 text-red-600 mr-2" />
                   Struggle to recall on your favorite topics
                 </li>
                 <li className="flex items-center">
-                  <XIcon className="w-4 h-4 text-red-600 dark:text-red-300 mr-2" />
+                  <XIcon className="w-4 h-4 text-red-600 mr-2" />
                   Waste time catching up where you left off
                 </li>
                 <li className="flex items-center">
-                  <XIcon className="w-4 h-4 text-red-600 dark:text-red-300 mr-2" />
+                  <XIcon className="w-4 h-4 text-red-600 mr-2" />
                   Overwhelmed by all your hobbies
                 </li>
               </ul>
@@ -107,15 +106,15 @@ export function ReasonsSection() {
             <CardContent>
               <ul className="leading-relaxed space-y-1.5">
                 <li className="flex items-center">
-                  <CheckIcon className="w-4 h-4 text-green-600 dark:text-green-300 mr-2" />
+                  <CheckIcon className="w-4 h-4 text-green-600 mr-2" />
                   Stay updated
                 </li>
                 <li className="flex items-center">
-                  <CheckIcon className="w-4 h-4 text-green-600 dark:text-green-300 mr-2" />
+                  <CheckIcon className="w-4 h-4 text-green-600 mr-2" />
                   Good community
                 </li>
                 <li className="flex items-center">
-                  <CheckIcon className="w-4 h-4 text-green-600 dark:text-green-300 mr-2" />
+                  <CheckIcon className="w-4 h-4 text-green-600 mr-2" />
                   Very informational
                 </li>
               </ul>
@@ -162,7 +161,7 @@ export function PlansSection() {
       <div className="container lg:px-20 pt-12 pb-24 md:py-20 flex flex-col items-center">
         <Title
           title="Plans"
-          subtitle="Be... Be... Become a participent"
+          subtitle="Become a participent"
           className="text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full py-8 md:py-16">
@@ -223,7 +222,7 @@ export function PlansSection() {
 export function JoinSection() {
   return (
     <section>
-      <div className="container lg:px-20 pt-12 pb-24 md:py-20 flex justify-center">
+      <div className="container lg:px-20 py-24 md:py-48 flex justify-center">
         <div className="relative flex items-center">
           <span className="absolute -inset-6 bg-gradient-to-r from-purple-500 to-purple-600 opacity-30 rounded-3xl blur-3xl scale-x-[-1] rotate-3"></span>
           <Card className="text-center min-w-fit border dark:bg-gradient-to-bl bg-background/55 dark:bg-transparent dark:from-white/10 dark:to-transparent dark:backdrop-blur-sm dark:border-white/20 p-8 md:p-12 z-20">
