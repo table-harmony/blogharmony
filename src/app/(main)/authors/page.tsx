@@ -1,10 +1,10 @@
 import { ComingSoon } from "@/components/coming-soon";
 import { Title } from "@/components/title";
 
-export default function DashboardPage() {
+export default function AuthorsPage() {
   return (
     <div className="container mx-auto max-w-4xl py-12">
-      <Title title="Dashboard" subtitle="Ke... Ke... Keep Track" />
+      <Title title="Authors" subtitle="Find our creators" />
       <ComingSoon />
     </div>
   );

@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 
-import { SiteFooter } from "@/components/site-footer";
-import { MobileNav } from "./mobile-nav";
-import { Icons } from "./icons";
 import { siteConfig } from "@/config/site";
+
 import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
-import { Button } from "./ui/button";
+
+import { Button } from "@/components/ui/button";
+import { SiteFooter } from "@/components/site-footer";
+import { MobileNav } from "@/components/mobile-nav";
+import { Icons } from "@/components/icons";
 
 export function Links() {
   return (

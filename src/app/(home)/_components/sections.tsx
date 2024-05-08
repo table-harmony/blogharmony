@@ -58,7 +58,7 @@ export function MainSection() {
         <SignedOut>
           <SignInButton>
             <Button className="w-72 rounded-full">
-              Get Harmony <ArrowRightIcon className="ml-2 h-4 w-4" />
+              Get Started <ArrowRightIcon className="ml-2 h-4 w-4" />
             </Button>
           </SignInButton>
         </SignedOut>
@@ -73,7 +73,7 @@ export function ReasonsSection() {
       <div className="container lg:px-20 pt-12 pb-24 md:py-20 flex flex-col items-center">
         <Title
           title="Reasons"
-          subtitle="Tired of not getting updated on your favorite topics ?"
+          subtitle="Tired of not getting up... up... updated on your favorite topics ?"
           className="text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8 md:py-16">
@@ -162,7 +162,7 @@ export function PlansSection() {
       <div className="container lg:px-20 pt-12 pb-24 md:py-20 flex flex-col items-center">
         <Title
           title="Plans"
-          subtitle="Become a participent"
+          subtitle="Be... Be... Become a participent"
           className="text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full py-8 md:py-16">

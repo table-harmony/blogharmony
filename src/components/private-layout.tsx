@@ -4,16 +4,23 @@ import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
 
+import { SignedIn, UserButton } from "@clerk/nextjs";
+
 import { MobileNav } from "@/components/mobile-nav";
 import { Icons } from "@/components/icons";
-import { SignedIn, UserButton } from "@clerk/nextjs";
 
 export function Links() {
   return (
-    <div className="hidden md:flex md:justify-center md:gap-12 md:items-center"></div>
+    <div className="hidden md:flex md:justify-center md:gap-12 md:items-center">
+      <Link href="/dashboard" className="text-muted-foreground hover:underline">
+        Dashboard
+      </Link>
+      <Link href="/authors" className="text-muted-foreground hover:underline">
+        Authors
+      </Link>
+    </div>
   );
 }
-
 export default function PrivateLayout({
   children,
 }: Readonly<{
