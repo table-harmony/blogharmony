@@ -5,13 +5,13 @@ import { Icons } from "./icons";
 
 export function SiteFooter() {
   return (
-    <footer className="z-10 border-t border-border w-full py-8 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex flex-col relative">
+    <footer className="z-10 border-t border-border py-8 flex flex-col relative">
       <div className="mx-auto container px-4 lg:px-20 pt-6">
         <section className="xl:grid xl:grid-cols-5 xl:gap-8">
           <div className="space-y-4 xl:col-span-2">
             <Icons.logo className="h-12 w-12" />
             <div>
-              <Link href={siteConfig.url} className="font-medium text-lg">
+              <Link href="/" className="font-medium text-lg">
                 {siteConfig.name}
               </Link>
               <p className="max-w-xs text-sm text-muted-foreground">

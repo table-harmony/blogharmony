@@ -1,8 +1,8 @@
 "use client";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import { ClerkProvider } from "@/components/clerk-provider";
 import { Toaster } from "@/components/ui/toaster";
+import { ClerkProvider } from "./clerk-provider";
 
 export function ContextProvider({ children }: { children: React.ReactNode }) {
   return (

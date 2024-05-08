@@ -1,11 +1,4 @@
-import { siteConfig } from "@/config/site";
-import Contact from "../_markdown/contact.mdx";
-
-export async function generateMetadata() {
-  return {
-    title: `Contact | ${siteConfig.name}`,
-  };
-}
+import Contact from "@/markdown/contact.mdx";
 
 export default function ContactPage() {
   return (

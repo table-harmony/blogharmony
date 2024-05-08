@@ -1,11 +1,4 @@
-import { siteConfig } from "@/config/site";
-import PrivacyPolicy from "../_markdown/privacy-policy.mdx";
-
-export async function generateMetadata() {
-  return {
-    title: `Privacy policy | ${siteConfig.name}`,
-  };
-}
+import PrivacyPolicy from "@/markdown/legal/privacy-policy.mdx";
 
 export default function PrivacyPolicyPage() {
   return (
