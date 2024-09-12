@@ -1,15 +1,20 @@
-## NextJS 14, Tailwind, Shadcn UI, MDX Blog application
+# BlogHarmony
 
-<p align="center">
- <img src="/public/homepage-image.png" width="720">
-</p>
+Discover, explore, and engage all topics.
 
-In this repo is a blog, a demo can be seen [here](https://harmonyblog.vercel.app/), Features include:
+Delivers impactful and attention-grabbing information about all topics. Discover, explore, and engage with development.
 
-- MDX Components
-- Shadcn UI
-- Pagination
+![banner](/public/banner.png)
 
-## Credits
+## Features
 
-Much of the design of this project is taken from shadcn in his projects, such as [shadcn/ui](https://ui.shadcn.com/) and [Taxonomy](https://tx.shadcn.com/)
+It once had my blog records.
+Then I created Version 3 and I have not implemented or going to implement the system I wanted to build (Sadly resembled a Patreon clone, so i dropped it).
+
+## Tech Stack
+
+**Client:** React, Next, TailwindCSS, Shadcn
+
+**Server:** Node
+
+![Logo](/public/logo.png)
